@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.tierlistChoixController">
+   <children>
+      <Button fx:id="addButton" maxHeight="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#addButtonPressEvent" prefHeight="80.0" prefWidth="82.0" style="-fx-background-color: #E3E3E3;" text="+" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="900.0" HBox.hgrow="ALWAYS">
+         <content>
+            <FlowPane fx:id="unsortedItemContainer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4a4a4a;" />
+         </content>
+      </ScrollPane>
+   </children>
+</HBox>

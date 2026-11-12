@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="60.0" style="-fx-background-color: #434343;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.importerItemController">
+   <children>
+      <HBox alignment="CENTER" spacing="30.0">
+         <children>
+            <RadioButton fx:id="importerImageRadioButton" mnemonicParsing="false" selected="true" text="Importer via une image" textFill="#e3e3e3" />
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button fx:id="ouvrirImage" mnemonicParsing="false" onAction="#ouvrirImagePressEvent" style="-fx-background-color: #E3E3E3; -fx-background-radius: 5;" text="Ouvrir une image">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="etatFichierCharge" text="Aucun fichier chargé" textFill="#e3e3e3" />
+                  <Button fx:id="addItemImportImage" mnemonicParsing="false" style="-fx-background-color: #E3E3E3; -fx-background-radius: 5;" text="Ajouter l'image">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" spacing="50.0">
+         <children>
+            <RadioButton fx:id="importerApiRadioButton" mnemonicParsing="false" text="Importer via l'API" textFill="#e3e3e3" />
+            <HBox spacing="10.0">
+               <children>
+                  <TextField fx:id="importApiTextField" prefHeight="25.0" prefWidth="154.0" promptText="Ex : Ultrakill" style="-fx-background-color: #E3E3E3;">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Button fx:id="addItemImportAPI" mnemonicParsing="false" onAction="#addItemImportApiPressEvent" style="-fx-background-color: #E3E3E3; -fx-background-radius: 5;" text="Ajouter l'image">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" spacing="30.0">
+         <children>
+            <RadioButton fx:id="importerTextRadioButton" mnemonicParsing="false" text="Importer via du texte" textFill="#e3e3e3" />
+            <HBox spacing="10.0">
+               <children>
+                  <TextField fx:id="importTextTextField" prefHeight="25.0" prefWidth="154.0" promptText="Ex : Dawn of War" style="-fx-background-color: #E3E3E3;">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Button fx:id="addItemImportText" mnemonicParsing="false" onAction="#addItemImportText" style="-fx-background-color: #E3E3E3; -fx-background-radius: 5;" text="Ajouter le texte">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" spacing="50.0">
+         <children>
+            <Button fx:id="terminerButton" mnemonicParsing="false" onAction="#terminerButtonPressEvent" style="-fx-background-color: #E3E3E3; -fx-background-radius: 5;" text="Terminer">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

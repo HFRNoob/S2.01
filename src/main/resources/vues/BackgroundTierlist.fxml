@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #434343;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.backgroundTierlistController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="1920.0" style="-fx-background-color: #161616;">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="100.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="120.0" prefWidth="1229.0" text="TierList Unmaker" textFill="#d7d7d7">
+                     <font>
+                        <Font name="Noto Naskh Arabic Regular" size="60.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="1120.0">
+               <children>
+                  <ImageView fx:id="SettingButton" fitHeight="75.0" fitWidth="75.0" onDragDetected="#settingButtonPressEvent" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/settingsIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children></HBox>
+      <VBox fx:id="mainContainer" alignment="TOP_CENTER" fillWidth="false" prefHeight="933.0" prefWidth="1920.0" style="-fx-background-color: #353233;" />
+   </children>
+</VBox>

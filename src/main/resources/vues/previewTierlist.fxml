@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.previewTierlistController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #353233;">
+         <children>
+            <MenuButton fx:id="settingsButton" mnemonicParsing="false" style="-fx-background-color: transparent;" text="•••" textFill="#f4f4f4">
+              <items>
+                <MenuItem fx:id="changerImageMenuItem" mnemonicParsing="false" onAction="#changerImagePressEvent" text="Changer d'image" />
+                <MenuItem fx:id="changerTitreMenuItem" mnemonicParsing="false" onAction="#changerTitrePressEvent" text="Changer le nom de la Tierlist" />
+                  <MenuItem fx:id="supprimerTierList" mnemonicParsing="false" onAction="#supprimerTierListPressEvent" text="Supprimer la Tierlist" />
+              </items>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+         </children>
+      </HBox>
+      <VBox fx:id="clickZone" alignment="CENTER" onMouseClicked="#ouvrirTierlistPressEvent">
+         <children>
+            <ImageView fx:id="previewImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ImageView>
+            <Label fx:id="tierlistName" alignment="CENTER" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #666666;" text="Nom de la tierlist" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </VBox>
+   </children>
+</VBox>
